@@ -6,6 +6,7 @@ const gioCode=require('../src/Utils/gioCode');
 const foreCast=require('../src/Utils/foreCast');
 console.log(__dirname);
 console.log(__filename);
+const port=process.env.port || 4000;
 //define paths for express config
 const publicDirectoryPath=path.join(__dirname,'../public');
 const viewPath=path.join(__dirname,'../templates/views')
@@ -32,7 +33,7 @@ app.get('/help',(req,res)=>{
         title:"Help",
         name:"Santhosh MS",
         href:"/CSSFolder/style.css",
-        helpText:"some helpgull text will be available soon"
+        helpText:"some helpfull text will be available soon"
     })
 })
 app.get('/help/*',(req,res)=>{
@@ -109,8 +110,8 @@ app.get('*',(req,res)=>{
         href:"/CSSFolder/style.css"
     })
 })
-app.listen(4000,()=>{
-    console.log('listening at port 3000')
+app.listen(port,()=>{
+    console.log(`listening at port${port}`)
 })
 // const http = require('http')
 // const url = 'http://api.weatherstack.com/current?access_key=66e140485e333d4c34d24aa1a62af642&query=40,-75&units=m'
