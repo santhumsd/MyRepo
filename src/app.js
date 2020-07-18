@@ -6,7 +6,7 @@ const gioCode=require('../src/Utils/gioCode');
 const foreCast=require('../src/Utils/foreCast');
 console.log(__dirname);
 console.log(__filename);
-const port=process.env.port || 4000;
+const port=process.env.PORT || 4000;
 //define paths for express config
 const publicDirectoryPath=path.join(__dirname,'../public');
 const viewPath=path.join(__dirname,'../templates/views')
