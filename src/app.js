@@ -3,7 +3,7 @@ const app=express();
 const path=require('path');
 const hbs=require('hbs');
 const gioCode=require('../src/Utils/gioCode');
-const foreCast=require('../src/Utils/foreCast');
+const foreCast=require('../src/Utils/forecast');
 console.log(__dirname);
 console.log(__filename);
 const port=process.env.PORT || 4000;
